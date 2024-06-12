@@ -26,20 +26,22 @@ function makeSound (key){
             maik.play();
             break;
         case "w":
-            var dun = new Audio("Sounds/dun-dun-dun.mp3");
+            var dun = new Audio("Sounds/woJakob.mp3");
             dun.play();
             break;
         case "e":
-            var aww = new Audio("Sounds/awwww.mp3");
-            aww.play();
+            var michael = new Audio("Sounds/michaelZittert.mp3");
+            michael.play();
             break;
         case "r":
             var kathi = new Audio("Sounds/Kathi.mp3");
             kathi.play();
+            pink();
         break;
         case "t":
             var eugen = new Audio("Sounds/Eugen.mp3");
             eugen.play();
+            russia();
         break;
         case "z":
             var jakob = new Audio("Sounds/JakobDabbed.mp3");
@@ -65,24 +67,69 @@ function makeSound (key){
             var danko = new Audio("Sounds/danko.mp3");
             danko.play();
         break;
+        case "a":
+            var russe = new Audio("Sounds/russeEugen.mp3");
+            russe.play();
+            russia();
+        break;
+        case "s":
+            var like = new Audio("Sounds/like.mp3");
+            like.play();
+        break;
         default: console.log(buttonInnerHtml);
     }
 }
 
 
 
-//Darkmode
+//Darkmode - getting triggerd by switch button
 function darkMode() {
     //header, footer and main
     document.getElementsByClassName('header')[0].classList.toggle("headerdarkMode");
     document.getElementsByClassName('footer')[0].classList.toggle ("footerdarkMode");
     document.getElementsByClassName('main')[0].classList.toggle("maindarkMode");
+    document.getElementById('search').classList.toggle("inputdarkMode");
     //Getting all the Tiles
     for (var i = 0; i<document.querySelectorAll(".tile").length; i++) {
-    document.getElementsByClassName('tile')[i].classList.toggle("tiledarkMode");
+    document.getElementsByClassName('tile')[i].classList.toggle("tiledarkMode");}
     // Getting all the Links
     for (var e = 0; e<document.querySelectorAll(".link").length; e++) {
-        document.getElementsByClassName('link')[e].classList.toggle("linkdarkMode");
+        document.getElementsByClassName('link')[e].classList.toggle("linkdarkMode");}
+    // Getting all the Buttons
+    for (var f = 0; f<document.querySelectorAll(".button-74").length; f++) {
+        document.getElementsByClassName('button-74')[f].classList.toggle("buttondarkMode");}
 }
 
-}}
+//durchsucht die h3 titel
+function search() {
+    let input = document.getElementById('search').value;
+    input = input.toLowerCase();
+    let x = document.querySelectorAll('.tile');
+    x.forEach((item) => {
+          if(!item.querySelector('h3').innerHTML.toLocaleLowerCase().includes(input)) {
+            item.classList.add('hidden');
+          } else {
+            item.classList.remove('hidden');
+          }
+    })
+}
+
+function russia(){
+    document.getElementsByClassName('main')[0].classList.add("russianBackground");
+
+    setTimeout(function(){
+        document.getElementsByClassName('main')[0].classList.remove("russianBackground");
+    }, 3000)
+}
+
+function pink(){
+    document.getElementsByClassName('main')[0].classList.remove("maindarkMode");
+    document.getElementsByClassName('main')[0].classList.add("pinkMode");
+
+    setTimeout(function(){
+        document.getElementsByClassName('main')[0].classList.remove("pinkMode");
+        if (document.getElementsByClassName('header')[0].classList.contains('headerdarkMode')){
+            document.getElementsByClassName('main')[0].classList.add("maindarkMode");
+        }
+    }, 2200)
+}

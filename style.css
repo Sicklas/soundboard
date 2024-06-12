@@ -35,16 +35,38 @@ header{
   align-items: center;
 }
 
+input{
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 10px 10px 10px 10px;
+
+}
+
+input:focus{
+  outline: none;
+}
+
 main{
     height: 90%;
     width: 100%;
     height: 100%;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
     grid-template-rows: repeat(auto-fit, 200px);
     padding: 20px;
     gap: 20px;
     overflow-y: auto;
+}
+
+.russianBackground{
+  background-image: url("./imgs/7323863-russland-nationalflagge-design-russland-flagge-3d-winken-hintergrund-illustration-vektor.jpg");
+  background-size:     cover;             
+  background-repeat:   no-repeat;
+  background-position: center center; 
+}
+
+.pinkMode{
+  background-color: rgb(252, 46, 197);
 }
 
 footer{
@@ -83,6 +105,11 @@ a{
     box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
     padding: 10px;
     height: 11rem;
+    max-width: 200px;
+} 
+
+.hidden {
+  display: none;
 }
 
 .likeWrapper{
@@ -117,7 +144,7 @@ a{
   background-color: red;
   border: 2px solid #422800;
   border-radius: 50%;
-  box-shadow: #422800 4px 4px 0 0;
+  /* box-shadow: #422800 4px 4px 0 0; */
   color: black;
   cursor: pointer;
   display: inline-block;
@@ -132,6 +159,13 @@ a{
   touch-action: manipulation;
   height: 70px;
   width: 70px;
+  
+}
+
+.buttondarkMode{
+-webkit-box-shadow:0px 0px 26px 3px rgba(255,46,46,0.44);
+-moz-box-shadow: 0px 0px 26px 3px rgba(255,46,46,0.44);
+box-shadow: 0px 0px 26px 3px rgba(255,46,46,0.44);
 
 }
 
@@ -184,7 +218,6 @@ a{
     height: 100%;
     background-color: #777;
     border-radius: 30px;
-    transform: translateX(-80px);
     transition: 0.2s;
   }
 
@@ -203,18 +236,18 @@ a{
 
 
 h1::selection{
-    background-color: yellow;
+    background-color: orange;
 }
 h3::selection{
-    background-color: yellow;
+    background-color: orange;
 }
 
 p::selection{
-  background-color: yellow;
+  background-color: orange;
 }
 
 a::selection{
-  background-color: yellow;
+  background-color: orange;
 }
 
 
@@ -240,7 +273,19 @@ a::selection{
   color: white;
 }
 
+.inputdarkMode{
+  background-color: rgb(31, 31, 31);
+  border: 1px solid white;
+  color: white;
+}
+
 @media (max-width: 768px) {
+  
+  input{
+    width: 40%;
+    margin-right: 50px;
+  }
+  
   .button-74 {
     height: 70px;
     width: 70px;
