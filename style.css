@@ -59,14 +59,24 @@ main{
 }
 
 .russianBackground{
-  background-image: url("./imgs/7323863-russland-nationalflagge-design-russland-flagge-3d-winken-hintergrund-illustration-vektor.jpg");
+  background-image: url("./imgs/eugen.gif");
   background-size:     cover;             
   background-repeat:   no-repeat;
   background-position: center center; 
 }
 
 .pinkMode{
-  background-color: rgb(252, 46, 197);
+  background-image: url("./imgs/kathi.gif");
+  background-size:     cover;             
+  background-repeat:   no-repeat;
+  background-position: center center; 
+}
+
+.dabMode{
+  background-image: url("./imgs/dab.gif");
+  background-size:     cover;             
+  background-repeat:   no-repeat;
+  background-position: center center; 
 }
 
 footer{
@@ -271,6 +281,22 @@ a::selection{
 }
 .linkdarkMode{
   color: white;
+}
+
+.mertBackground{
+  background-image: url("./imgs/mert.gif");
+  background-size:     cover;             
+  background-repeat:   no-repeat;      
+  background-repeat:   repeat;
+  background-position: center; 
+}
+
+.maikBackground{
+  background-image: url("./imgs/maik.gif");
+  background-size:     cover;             
+  background-repeat:   no-repeat;      
+  background-repeat:   repeat;
+  background-position: center; 
 }
 
 .inputdarkMode{

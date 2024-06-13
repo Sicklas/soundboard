@@ -1,4 +1,4 @@
-//Year for Copyright
+//Year for Copyrighthttp://127.0.0.1:3000/index.html
 document.getElementById("year").innerHTML = new Date().getFullYear();
 
 
@@ -24,6 +24,7 @@ function makeSound (key){
         case "q":
             var maik = new Audio("Sounds/Maik-Zeit-zu-flippen.mp3");
             maik.play();
+            maikBack();
             break;
         case "w":
             var dun = new Audio("Sounds/woJakob.mp3");
@@ -46,18 +47,22 @@ function makeSound (key){
         case "z":
             var jakob = new Audio("Sounds/JakobDabbed.mp3");
             jakob.play();
+            dabBack();
         break;
         case "u":
             var mert = new Audio("Sounds/Mert.mp3");
             mert.play();
+            mertBack();
         break;
         case "i":
             var niklas = new Audio("Sounds/niklasDabbed.mp3");
             niklas.play();
+            dabBack();
         break;
         case "o":
             var maikD = new Audio("Sounds/maikDabbed.mp3");
             maikD.play();
+            dabBack();
         break;
         case "p":
             var moinEugen = new Audio("Sounds/moinEugen.mp3");
@@ -114,6 +119,8 @@ function search() {
     })
 }
 
+
+//custom backgrounds
 function russia(){
     document.getElementsByClassName('main')[0].classList.add("russianBackground");
 
@@ -132,4 +139,28 @@ function pink(){
             document.getElementsByClassName('main')[0].classList.add("maindarkMode");
         }
     }, 2200)
+}
+
+function mertBack(){
+    document.getElementsByClassName('main')[0].classList.add("mertBackground");
+
+    setTimeout(function(){
+        document.getElementsByClassName('main')[0].classList.remove("mertBackground");
+    }, 6000)
+}
+
+function maikBack(){
+    document.getElementsByClassName('main')[0].classList.add("maikBackground");
+
+    setTimeout(function(){
+        document.getElementsByClassName('main')[0].classList.remove("maikBackground");
+    }, 3500)
+}
+
+function dabBack(){
+    document.getElementsByClassName('main')[0].classList.add("dabMode");
+
+    setTimeout(function(){
+        document.getElementsByClassName('main')[0].classList.remove("dabMode");
+    }, 2000)
 }
