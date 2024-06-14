@@ -79,6 +79,10 @@ main{
   background-position: center center; 
 }
 
+.sheeshMode{
+  background-image: url("./imgs/sheesh.gif");
+}
+
 footer{
   /* border-top: 1px solid black; */
   height: 10%;

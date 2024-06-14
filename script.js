@@ -81,6 +81,16 @@ function makeSound (key){
             var like = new Audio("Sounds/like.mp3");
             like.play();
         break;
+        case "d":
+            var like = new Audio("Sounds/flippen.mp3");
+            like.play();
+            maikBack();
+        break;
+        case "f":
+            var like = new Audio("Sounds/sheesh.mp3");
+            like.play();
+            sheeshBack();
+        break;
         default: console.log(buttonInnerHtml);
     }
 }
@@ -163,4 +173,12 @@ function dabBack(){
     setTimeout(function(){
         document.getElementsByClassName('main')[0].classList.remove("dabMode");
     }, 2000)
+}
+
+function sheeshBack(){
+    document.getElementsByClassName('main')[0].classList.add("sheeshMode");
+
+    setTimeout(function(){
+        document.getElementsByClassName('main')[0].classList.remove("sheeshMode");
+    }, 1000)
 }
