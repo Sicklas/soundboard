@@ -82,15 +82,26 @@ function makeSound (key){
             like.play();
         break;
         case "d":
-            var like = new Audio("Sounds/flippen.mp3");
-            like.play();
+            var flippen = new Audio("Sounds/flippen.mp3");
+            flippen.play();
             maikBack();
         break;
         case "f":
-            var like = new Audio("Sounds/sheesh.mp3");
-            like.play();
+            var flippen = new Audio("Sounds/sheesh.mp3");
+            flippen.play();
             sheeshBack();
         break;
+        case "g":
+            var leute = new Audio("Sounds/dieLeute.mp3");
+            leute.play();
+    
+        break;
+        case "h":
+            var gott = new Audio("Sounds/gott.mp3");
+            gott.play();
+    
+        break;
+        
         default: console.log(buttonInnerHtml);
     }
 }
