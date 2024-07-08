@@ -82,9 +82,9 @@ function makeSound (key){
             like.play();
         break;
         case "d":
-            var flippen = new Audio("Sounds/flippen.mp3");
-            flippen.play();
-            maikBack();
+            var niceTrut = new Audio("Sounds/schoenerTruthahn.mp3");
+            niceTrut.play();
+            
         break;
         case "f":
             var flippen = new Audio("Sounds/sheesh.mp3");
@@ -100,6 +100,37 @@ function makeSound (key){
             var gott = new Audio("Sounds/gott.mp3");
             gott.play();
     
+        break;
+        case "j":
+            var uwu = new Audio("Sounds/uwu.mp3");
+            uwu.play();
+    
+        break;
+        case "k":
+            var nani = new Audio("Sounds/nani.mp3");
+            nani.play();
+    
+        break;
+        case "l":
+            var gobbi = new Audio("Sounds/gobbedigobble.mp3");
+            gobbi.play();
+    
+        break;
+        case "ö":
+            var fortnite = new Audio("Sounds/fortnite.mp3");
+            fortnite.play();
+            fortniteBack();
+    
+        break;
+        case "ä":
+            var ohGobble = new Audio("Sounds/ohmanGobble.mp3");
+            ohGobble.play();
+    
+        break;
+        case "y":
+            var rick = new Audio("Sounds/rick.mp3");
+            rick.play();
+            rickBack();
         break;
         
         default: console.log(buttonInnerHtml);
@@ -192,4 +223,20 @@ function sheeshBack(){
     setTimeout(function(){
         document.getElementsByClassName('main')[0].classList.remove("sheeshMode");
     }, 1000)
+}
+
+function fortniteBack(){
+    document.getElementsByClassName('main')[0].classList.add("fortniteMode");
+
+    setTimeout(function(){
+        document.getElementsByClassName('main')[0].classList.remove("fortniteMode");
+    }, 2200)
+}
+
+function rickBack(){
+    document.getElementsByClassName('main')[0].classList.add("rickMode");
+
+    setTimeout(function(){
+        document.getElementsByClassName('main')[0].classList.remove("rickMode");
+    }, 48000)
 }
