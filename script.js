@@ -1,4 +1,4 @@
-//Year for Copyrighthttp://127.0.0.1:3000/index.html
+//Year for Copyright
 document.getElementById("year").innerHTML = new Date().getFullYear();
 
 
@@ -13,13 +13,23 @@ for (var i = 0; i<numberOfSoundButtons; i++) {
     })
 }
 
-//Detecting Key Press
+
+
+//Detecting Key Press - when search input is active dont make Sound
 document.addEventListener("keydown",function(event) {
-    makeSound(event.key);
+    let hasFocus = $('#search').is(':focus');
+    if (hasFocus) {
+        console.log("Search is active");
+    }
+    else{
+        makeSound(event.key);
+    }
 });
 
 
+
 function makeSound (key){
+    
     switch (key) {
         case "q":
             var maik = new Audio("Sounds/Maik-Zeit-zu-flippen.mp3");
@@ -128,9 +138,34 @@ function makeSound (key){
     
         break;
         case "y":
-            var rick = new Audio("Sounds/rick.mp3");
-            rick.play();
-            rickBack();
+            var niceMeret = new Audio("Sounds/niceMeret.mp3");
+            niceMeret.play();
+            
+        break;
+        case "x":
+            var woEugen = new Audio("Sounds/woEugen.mp3");
+            woEugen.play();
+            
+        break;
+        case "c":
+            var frog = new Audio("Sounds/Frosch.mp3");
+            frog.play();
+            
+        break;
+        case "v":
+            var scheinwerfer = new Audio("Sounds/Scheinwerfer.mp3");
+            scheinwerfer.play();
+            
+        break;
+        case "b":
+            var augenGroesse = new Audio("Sounds/sagAugen.mp3");
+            augenGroesse.play();
+            
+        break;
+        case "n":
+            var welcome = new Audio("Sounds/willkommen.mp3");
+            welcome.play();
+            
         break;
         
         default: console.log(buttonInnerHtml);
@@ -231,12 +266,4 @@ function fortniteBack(){
     setTimeout(function(){
         document.getElementsByClassName('main')[0].classList.remove("fortniteMode");
     }, 2200)
-}
-
-function rickBack(){
-    document.getElementsByClassName('main')[0].classList.add("rickMode");
-
-    setTimeout(function(){
-        document.getElementsByClassName('main')[0].classList.remove("rickMode");
-    }, 48000)
 }
