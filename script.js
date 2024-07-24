@@ -148,12 +148,12 @@ function makeSound (key){
             
         break;
         case "c":
-            var frog = new Audio("Sounds/frosch.mp3");
+            var frog = new Audio("Sounds/Frosch.mp3");
             frog.play();
             
         break;
         case "v":
-            var scheinwerfer = new Audio("Sounds/scheinwerfer.mp3");
+            var scheinwerfer = new Audio("Sounds/Scheinwerfer.mp3");
             scheinwerfer.play();
             
         break;
@@ -167,6 +167,42 @@ function makeSound (key){
             welcome.play();
             
         break;
+        case "m":
+            var oooh = new Audio("Sounds/OOOOOH.mp3");
+            oooh.play();
+            
+        break;
+        case "1":
+            var fragezeichen = new Audio("Sounds/Die drei 0x3F.mp3");
+            fragezeichen.play();
+            
+        break;
+        case "2":
+            var pert = new Audio("Sounds/Pert der Papagei.mp3");
+            pert.play();
+            
+        break;
+        case "3":
+            var julia = new Audio("Sounds/JuliaDieForscherin.mp3");
+            julia.play();
+            
+        break;
+        case "4":
+            var macher = new Audio("Sounds/PascalIstDerMacher.mp3");
+            macher.play();
+            
+        break;
+        case "5":
+            var denker = new Audio("Sounds/NiklasIstDerDenker.mp3");
+            denker.play();
+            
+        break;
+        case "6":
+            var beer = new Audio("Sounds/FeierabendBierWeitersagen.mp3");
+            beer.play();
+            
+        break;
+        
         
         default: console.log(buttonInnerHtml);
     }
@@ -190,6 +226,8 @@ function darkMode() {
     // Getting all the Buttons
     for (var f = 0; f<document.querySelectorAll(".button-74").length; f++) {
         document.getElementsByClassName('button-74')[f].classList.toggle("buttondarkMode");}
+    
+    
 }
 
 //durchsucht die h3 titel
