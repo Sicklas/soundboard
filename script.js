@@ -148,12 +148,12 @@ function makeSound (key){
             
         break;
         case "c":
-            var frog = new Audio("Sounds/Frosch.mp3");
+            var frog = new Audio("Sounds/frosch.mp3");
             frog.play();
             
         break;
         case "v":
-            var scheinwerfer = new Audio("Sounds/Scheinwerfer.mp3");
+            var scheinwerfer = new Audio("Sounds/scheinwerfer.mp3");
             scheinwerfer.play();
             
         break;
